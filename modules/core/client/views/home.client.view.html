@@ -1,0 +1,1652 @@
+<section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!--<img alt="MEAN.JS" class="img-responsive text-center" src="/modules/core/client/img/brand/logo.png" />-->
+
+
+
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #565553;
+      font-size: 11px;
+      background-color: #808080;
+      background-image: url(/images/tbg.jpg);
+      background-repeat: repeat-x;
+      background-position: center top;
+    }
+
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    form,
+    input,
+    textarea,
+    img,
+    span {
+      margin: 0;
+      padding: 0;
+      font-weight: normal;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    img {
+      border-width: 0;
+    }
+
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: #006600
+    }
+
+    a:hover {
+      color: #F60;
+      text-decoration: underline;
+    }
+
+
+    #top {
+      background-image: url(/images/top.jpg);
+      clear: both;
+      width: 970px;
+      margin: 0 auto;
+      height: 108px;
+      position: relative;
+    }
+
+    #main {
+      width: 970px;
+      margin: 0 auto;
+    }
+
+    #t_left {
+      float: left;
+      width: 145px;
+      position: relative;
+      height: auto;
+    }
+
+    #t_right {
+      float: right;
+      width: 818px
+    }
+
+    #t_right2 {
+      float: right;
+      width: 810px
+    }
+
+    .ui1 {
+      background-image: url(/images/e2.gif);
+      background-repeat: no-repeat;
+      background-position: left top;
+      display: block;
+      clear: both;
+      height: 10px;
+      width: 145px;
+    }
+
+    .ui2 {
+      background-image: url(/images/e2.gif);
+      background-position: left bottom;
+      clear: both;
+      height: 10px;
+      width: 145px;
+    }
+
+    .lonmenu {
+      background-image: url(/images/e1.gif);
+      background-repeat: repeat-y;
+      background-position: left top;
+      width: 121px;
+      padding-right: 12px;
+      padding-left: 12px;
+    }
+
+    .lonmenu li,
+    .lonmenu2 li {
+      line-height: 24px;
+      background-image: url(/images/s.png);
+      background-repeat: no-repeat;
+      background-position: 3px -188px;
+      padding-left: 13px;
+      color: #006600;
+      font-weight: bold;
+      clear: both;
+    }
+
+    .lonmenu2,
+    .lonmenu22 {
+      width: 129px;
+      padding-right: 7px;
+      padding-left: 7px;
+      border: 1px solid #B3C174;
+    }
+
+    .lonmenu22 li a {
+      line-height: 24px;
+      background-image: url(/images/s.png);
+      background-repeat: no-repeat;
+      background-position: 3px -188px;
+      padding-left: 13px;
+      color: #006600;
+      font-weight: bold;
+      display: block;
+    }
+
+    .lonmenu22 li a:hover {
+      color: #F60;
+      text-decoration: none;
+    }
+
+    .lonmenu22 li {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: #E6E6E6;
+    }
+
+    .dw {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: #CFD0CC;
+    }
+
+    .r_title {
+      line-height: 26px;
+      font-weight: bold;
+      color: #E2F4DB;
+      background-image: url(/images/r.png);
+      height: 26px;
+      width: 137px;
+      padding-left: 8px;
+      font-size: 12px;
+    }
+
+    .r_open {
+      line-height: 26px;
+      color: #336600;
+      background-image: url(/images/2tit.gif);
+      height: 26px;
+      width: 143px;
+      border: 1px solid #80B51F;
+    }
+
+    .r_open span {
+      background-image: url(/images/s.png);
+      background-repeat: no-repeat;
+      background-position: 5px -41px;
+      display: block;
+      padding-left: 21px;
+    }
+
+    .country_menu {
+      background-color: #FFF;
+      background-image: url(/images/rt.gif);
+      background-repeat: repeat-x;
+      background-position: left top;
+      width: 119px;
+      border-right-width: 1px;
+      border-left-width: 1px;
+      border-right-style: solid;
+      border-left-style: solid;
+      border-right-color: #80B51F;
+      border-left-color: #80B51F;
+      padding-top: 9px;
+      padding-right: 12px;
+      padding-bottom: 9px;
+      padding-left: 12px;
+      position: relative;
+    }
+
+    .country_menu li {
+      line-height: 16px;
+      background-image: url(/images/s.png);
+      background-repeat: no-repeat;
+      background-position: left -111px;
+      padding-left: 10px;
+    }
+
+    .live {
+      background-color: #FFF;
+      padding: 5px;
+      width: 808px;
+    }
+
+    .ad_d {
+      margin-bottom: 5px;
+    }
+
+    .livetool {
+      height: 31px;
+    }
+
+    .livetool li {
+      float: left;
+      margin-right: 2px;
+      line-height: 31px;
+      color: #FFF;
+      background-image: url(/images/ymenu.png);
+      background-repeat: repeat-x;
+      background-position: left top;
+    }
+
+    .livetool li a,
+    .livetool li a:visited {
+      color: #FFF;
+      display: block;
+      padding-right: 9px;
+      padding-left: 9px;
+      font-size: 12px;
+    }
+
+    #bottom {
+      background-image: url(/images/ymenu.png);
+      background-repeat: repeat-x;
+      background-position: left -192px;
+      width: 930px;
+      margin-right: auto;
+      margin-left: auto;
+      height: 60px;
+      margin-top: 6px;
+      color: #E3EAD6;
+      padding: 20px;
+    }
+
+    .livetool li a:hover {
+      color: #090;
+      text-decoration: none;
+      background-image: url(/images/ymenu.png);
+      background-repeat: repeat-x;
+      background-position: -35px -124px;
+    }
+
+    .livetool .blue a,
+    .livetool .blue a:visited {
+      background-image: url(/images/ymenu.png);
+      background-repeat: repeat-x;
+      background-position: -48px -62px;
+    }
+
+    .livetool .blue a:hover {
+      color: #090;
+      text-decoration: none;
+      background-image: url(/images/ymenu.png);
+      background-repeat: repeat-x;
+      background-position: -35px -124px;
+    }
+
+    .livetool .show {
+      padding: 0 10px;
+      background-image: url(/images/ymenu.png);
+      background-repeat: repeat-x;
+      background-position: -31px -93px;
+      color: #333;
+    }
+
+    .livetool .menu_on a,
+    .livetool .menu_on a:visited,
+    .livetool .menu_on a:hover {
+      color: #006600;
+      background-image: url(/images/ymenu.png);
+      background-repeat: repeat-x;
+      background-position: left -31px;
+      font-weight: bold;
+    }
+
+    .webmenu {
+      position: absolute;
+      left: 48px;
+      top: 68px;
+      width: 890px;
+    }
+
+    .webmenu li {
+      float: left;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 30px;
+      padding-right: 8px;
+      padding-left: 6px;
+    }
+
+    .ki {
+      background-image: url(/images/ymenu.png);
+      background-repeat: no-repeat;
+      background-position: right -156px;
+    }
+
+    . {
+      border: 1px solid #BFCEB5;
+    }
+
+    .tg a,
+    .tg a:visited {
+      color: #FFF;
+      font-size: 12px;
+      padding-right: 4px;
+      padding-left: 4px;
+    }
+
+    .tg a:hover {
+      color: #FF0;
+    }
+
+    #bottom a,
+    #bottom a:visited {
+      color: #99CC00
+    }
+
+    #main2 {
+      background-color: #FFF;
+      clear: both;
+      width: 960px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 2px;
+      padding-right: 5px;
+      padding-bottom: 5px;
+      padding-left: 5px;
+    }
+
+    .tool2 {
+      background-image: url(/images/ymenu.png);
+      background-repeat: repeat-x;
+      background-position: left -292px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #FFF;
+      line-height: 26px;
+      padding-left: 8px;
+    }
+
+    .ytitle {
+      float: left;
+      font-size: 20px;
+      font-weight: bold;
+      color: #FFF;
+      line-height: 30px;
+      width: 200px;
+      background-image: url(/images/img_sel_down.gif);
+      background-repeat: no-repeat;
+      background-position: 10px 10px;
+      padding-left: 30px;
+    }
+
+    .showhide {
+      float: right;
+      height: 31px;
+      padding: 0 12px;
+      line-height: 31px;
+      text-align: center;
+      background-image: url(/images/ymenu.png);
+      background-repeat: repeat-x;
+      background-position: left -93px;
+    }
+
+
+    .cc a,
+    .cc a:visited {
+      float: right;
+      background-image: url(blue_img/cc.gif);
+      display: block;
+      height: 13px;
+      width: 15px;
+      margin-top: 1px;
+      background-repeat: no-repeat;
+    }
+
+    .sotit {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: #E1E1E1;
+      height: 22px;
+      padding-top: 2px;
+      padding-right: 6px;
+      padding-bottom: 0;
+      padding-left: 6px;
+      line-height: 18px;
+      background-color: #3F5C30;
+      margin-bottom: 6px;
+      color: #FFF;
+    }
+
+    .bts {
+      display: block;
+      clear: both;
+      padding: 8px 0 8px 11px;
+      text-align: center;
+    }
+
+    .bts input,
+    .vsbtn {
+      margin: 0 3px;
+      font-size: 11px;
+      font-weight: bold;
+      background-color: #FC0;
+      border: 1px solid #F90;
+      color: #900;
+      line-height: 18px;
+      cursor: pointer;
+    }
+
+    #showCompany {
+      visibility: hidden;
+      top: -30px;
+      left: -36px;
+      position: absolute;
+      border: 2px solid #407032;
+      text-align: center;
+      background-color: #F1FED3;
+      z-index: 8;
+      padding-bottom: 10px;
+    }
+
+    .c222 a,
+    .c222 a:visited {
+      width: 90px;
+      line-height: 22px;
+      display: block;
+      height: 22px;
+    }
+
+    .c222 a:hover {
+      color: #360;
+      background-color: #9FF83F;
+      text-decoration: none;
+    }
+
+    #myleague2 {
+      OVERFLOW: auto;
+      height: 300px;
+    }
+
+    .pl_left {
+      float: left;
+      width: 145px
+    }
+
+    .tybg {
+      background-image: url(../images/tr_bg.gif);
+      background-repeat: repeat-x;
+      background-position: center 1200px;
+    }
+
+  </style>
+
+  <style>
+    /*------------------------------------------------main--------------------*/
+
+    #main3 {
+      width: 95%;
+      background-color: White;
+      clear: both;
+      margin: 4px auto 0 auto;
+      padding: 3px 6px 6px 6px;
+    }
+
+    .clear {
+      clear: both;
+      display: block;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .lrdiv {
+      background-color: #FFF;
+      clear: both;
+      width: 143px;
+      border: 1px solid #C0DF82;
+    }
+
+    .lr_tit {
+      line-height: 24px;
+      font-weight: bold;
+      color: #FFF;
+      background-image: url(blue_img/tit_bg.gif);
+      display: block;
+      height: 24px;
+      width: 136px;
+      padding-left: 7px;
+    }
+
+    .lr_tit a {
+      color: #FFF;
+    }
+
+    .lr_litime,
+    .lr_litime a {
+      line-height: 20px;
+    }
+    /*------------------------------------------------left--------------------*/
+
+    .leftnav {}
+
+    .leftnav li {
+      border-bottom: 1px solid #D7D7D7;
+    }
+
+    .leftnav li a {
+      line-height: 20px;
+      background-image: url(blue_img/lraw.gif);
+      display: block;
+      height: 20px;
+      width: 137px;
+      font-weight: bold;
+      color: #425B7E;
+      padding-left: 6px;
+      text-align: left;
+    }
+
+    .leftnav li a:hover,
+    .leftnav .select a,
+    .leftnav .select a {
+      color: #C60;
+      background: url(blue_img/lraw.gif) 0px 20px;
+      text-decoration: none;
+    }
+
+    #nob,
+    #nob2 {
+      border-bottom-width: 0;
+    }
+    /*------------------------------------------------min--------------------*/
+
+    .mintopnav {
+      line-height: 24px;
+      height: 24px;
+      background-image: url(blue_img/minbg.gif);
+      border-top: 1px solid #A0BAD3;
+      border-right: 1px solid #A0BAD3;
+      border-bottom: 1px solid #C6C6C6;
+      border-left: 1px solid #A0BAD3;
+      margin-bottom: 3px;
+    }
+
+    .mintopnav li {
+      float: left;
+    }
+
+    .mintopnav li a {
+      background: url(blue_img/minbg_line.gif) no-repeat right;
+      display: block;
+      float: left;
+      padding: 0 12px;
+      line-height: 24px;
+      height: 24px;
+      font-weight: bold;
+      color: #425B7E;
+    }
+
+    .mintopnav li a:hover {
+      background-color: #FFF;
+      text-decoration: none;
+    }
+
+    .mintopnav li a span {
+      color: red;
+      font-weight: bold;
+    }
+
+    #mnavnone a {
+      background-image: none;
+    }
+
+    #note {
+      line-height: 26px;
+      background-color: #FFFACC;
+      clear: both;
+      border-right: 1px solid #C6C6C6;
+      border-left: 1px solid #C6C6C6;
+      padding: 0 10px;
+      text-align: left;
+      height: 26px;
+      color: #B36946;
+    }
+
+    #note .close a {
+      float: right;
+      display: block;
+      background-image: url(blue_img/close.gif);
+      height: 14px;
+      width: 14px;
+      margin-top: 5px;
+      line-height: 0px;
+    }
+
+    #mintable {
+      border: 1px solid #C6C6C6;
+    }
+
+    #mintable td,
+    #oddsmain td {
+      height: 24px;
+      border-bottom: 1px solid #DFDFDF;
+      text-align: center;
+    }
+
+    .scoretitle {
+      font-weight: bold;
+      color: #FFF;
+      background-color: #2E9805;
+      line-height: 26px;
+      text-align: center;
+      background-image: url(../images/uiu.gif);
+      background-repeat: repeat-x;
+      background-position: top;
+    }
+
+    .Leaguestitle {
+      background-color: #FFFF66;
+    }
+
+    .red {
+      color: #F00;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .blue {
+      color: #00f;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .red2 {
+      color: #F00;
+    }
+
+    .status {
+      color: #0066FF
+    }
+
+    .time {
+      color: #666
+    }
+
+    .toolimg img {
+      margin: 0 2px
+    }
+
+    .b1 {
+      background-color: #ffffff;
+    }
+
+    .b2 {
+      background-color: #f4f4f4;
+    }
+
+    .b3 {
+      BACKGROUND-COLOR: #eeeeff
+    }
+
+    .b4 {
+      BACKGROUND-COLOR: #eeeeee
+    }
+
+    .l1 {
+      float: left;
+      margin-left: 10px;
+      padding-left: 12px;
+      padding-top: 3px;
+      color: #B36946;
+      background-image: url(blue_img/ds.gif);
+      background-repeat: no-repeat;
+      background-position: left 6px;
+    }
+
+    .l1 a {
+      font-weight: bold;
+    }
+
+    .l2 {
+      float: right;
+      padding: 4px 4px 0 0;
+    }
+
+    .l2 img {
+      margin: 0 2px
+    }
+
+    .contest {
+      font-weight: bold;
+      background-color: #FFFACC;
+    }
+
+    .l3 {
+      float: left;
+      margin-left: 10px;
+      background: url(blue_img/ds.gif) no-repeat left;
+      padding-left: 12px;
+      color: black;
+      font-weight: bold;
+    }
+
+    .l4 {
+      float: left;
+      margin-left: 5px;
+      padding-left: 6px;
+      color: #B36946;
+    }
+
+    .l5 {
+      float: right;
+      padding: 2px 2px 0 0;
+    }
+
+    .l5 img {
+      margin: 0 2px
+    }
+
+    .contest {
+      font-weight: bold;
+      background-color: #FFFACC;
+    }
+
+    .date_li {
+      height: 24px;
+      line-height: 24px;
+      background-image: url(blue_img/minbg.gif);
+      padding-left: 45px;
+      margin-bottom: 5px;
+    }
+
+    .date_li a,
+    .date_li a:visited {
+      display: block;
+      float: left;
+      padding: 0 8px;
+      background: url(blue_img/minbg_line.gif) no-repeat right;
+    }
+
+    .date_li a:hover {
+      background-color: #F4FBFF;
+      text-decoration: none;
+      color: #F30;
+    }
+
+    .date_li b {
+      display: block;
+      float: left;
+      padding: 0 8px;
+      background-image: url(../images/date6.gif);
+      color: #FFF;
+    }
+    /*------------------------------------------------right--------------------*/
+
+    #right {
+      width: 145px;
+      float: right
+    }
+
+    .soundtab {
+      background-color: #F4F5F5;
+      clear: both;
+      border-right: 1px solid #A0BAD3;
+      border-bottom: 1px solid #A0BAD3;
+      border-left: 1px solid #A0BAD3;
+      padding: 4px 0 4px 4px;
+      line-height: 20px;
+    }
+
+    .soundtab select {
+      margin-left: 2px;
+      width: 65px;
+      height: 20px;
+      font-size: 11px;
+    }
+
+    .soundtab span {
+      line-height: 18px
+    }
+
+    .fontse a {
+      background: url(blue_img/font.gif) repeat-x;
+      font-weight: bold;
+      border: 1px solid #D1D1D1;
+      margin-right: 7px;
+      display: block;
+      float: left;
+      padding-right: 4px;
+      padding-left: 4px;
+    }
+
+    .fontse a:hover {
+      color: #039;
+      background-image: url(blue_img/font2.gif);
+      border: 1px solid #09F;
+      text-decoration: none;
+    }
+
+    .e12:link,
+    .e12:visited {
+      font-size: 12px
+    }
+
+    .e14:link,
+    .e14:visited {
+      font-size: 14px
+    }
+
+    .set1:link,
+    .set1:visited {
+      padding-left: 13px;
+      background: url(blue_img/re.gif) no-repeat left top;
+      margin: 0 8px 0 4px;
+    }
+
+    .set2:link,
+    .set2:visited {
+      padding-left: 13px;
+      background: url(blue_img/re.gif) no-repeat left -20px;
+    }
+
+    .color {
+      background-image: url(blue_img/color.gif);
+      height: 8px;
+      width: 72px;
+      margin-top: 3px;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+
+    .color li {
+      float: left
+    }
+
+    .color li a {
+      display: block;
+      height: 8px;
+      width: 8px;
+      margin-right: 4px;
+    }
+
+    .s_blue a:hover {
+      background: url(blue_img/color.gif) left -8px;
+    }
+
+    .s_red a:hover {
+      background: url(blue_img/color.gif) -12px -8px;
+    }
+
+    .s_black a:hover {
+      background: url(blue_img/color.gif) -24px -8px;
+    }
+
+    .s_green a:hover {
+      background: url(blue_img/color.gif) -36px -8px;
+    }
+
+    .s_black2 a:hover {
+      background: url(blue_img/color.gif) -48px -8px;
+    }
+
+    .s_purple a:hover {
+      background: url(blue_img/color.gif) -60px -8px;
+    }
+    /*------------------------------------------------odds 2in1--------------------*/
+
+    #oddsmain {
+      float: left;
+      width: 787px
+    }
+
+    .oddstd p {
+      line-height: 16px;
+      display: block;
+      height: 16px;
+    }
+
+    .odds1 {
+      color: #880000;
+    }
+
+    .odds2 {
+      color: #0000bb;
+    }
+
+    .up {
+      background-color: #F8DAAD;
+    }
+
+    .down {
+      background-color: #CCECE6;
+    }
+
+    A.sb {
+      FONT-WEIGHT: bold;
+      COLOR: #cc0000;
+      text-DECORATION: none;
+      font-size: 12px;
+    }
+
+    A.sb:link {
+      FONT-WEIGHT: bold;
+      COLOR: #cc0000;
+      text-DECORATION: none
+    }
+
+    A.sb:visited {
+      FONT-WEIGHT: bold;
+      COLOR: #cc0000;
+      text-DECORATION: none
+    }
+
+    A.sb:hover {
+      FONT-WEIGHT: bold;
+      COLOR: #000066;
+    }
+
+    a.pk:link {
+      color: #0000FF;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    a.pk:visited {
+      color: #0000FF;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    a.pk:hover {
+      color: #FF0000;
+      font-size: 12px;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    /*------------------------------------------------bottom--------------------*/
+
+    .bt_time {
+      font-weight: bold;
+      color: #F60;
+    }
+
+    .p2 {
+      color: #999
+    }
+
+    #score_win {
+      position: absolute;
+      left: 356px;
+      top: 235px;
+      border: 3px solid #090;
+      background-color: #FFF;
+      padding: 1px;
+    }
+
+    .score_title {
+      background-color: #DBECA6;
+    }
+
+    #showoptional {
+      background-color: #FFF;
+      padding: 1px;
+      width: 450px;
+      border: 2px solid #666;
+      position: absolute;
+      left: 20px;
+      top: 25px;
+      z-index: 5;
+      position: absolute;
+      visibility: hidden;
+    }
+
+    #showoptional h1 {
+      float: left;
+      font-size: 11px;
+      font-weight: bold;
+      background-image: url(blue_img/show.gif);
+      background-repeat: no-repeat;
+      background-position: left;
+      padding-left: 15px;
+    }
+
+    #showoptional li {
+      line-height: 26px;
+      display: block;
+      float: left;
+      width: 100px;
+      padding-left: 5px;
+      padding-bottom: 5px;
+    }
+
+    #showoptional2 {
+      background-color: #E6F3CD;
+      padding: 1px;
+      width: 450px;
+      border: 2px solid #060;
+      position: absolute;
+      left: 20px;
+      top: 0;
+      z-index: 5;
+      position: absolute;
+      visibility: hidden;
+    }
+
+    #showoptional2 h1,
+    #showCompany h1 {
+      float: left;
+      font-size: 11px;
+      font-weight: bold;
+      background-image: url(blue_img/show.gif);
+      background-repeat: no-repeat;
+      background-position: left;
+      padding-left: 6px;
+    }
+
+    #showoptional2 li {
+      line-height: 22px;
+      display: block;
+      float: left;
+      width: 210px;
+      padding-left: 5px;
+    }
+
+    .spanleague {
+      display: block;
+      clear: both;
+      background-color: #E2F5FA;
+      border: 1px solid #AEC6EC;
+      color: #06C;
+      line-height: 26px;
+    }
+
+    #myleague {
+      OVERFLOW: auto;
+    }
+
+    #myleague2 {
+      OVERFLOW: auto;
+      height: 300px;
+    }
+
+
+
+    .rbl {
+      padding: 4px;
+      text-align: center;
+      font-weight: bold;
+      border-bottom: 1px solid #AEC6EC;
+      color: #06C;
+      margin-bottom: 5px;
+    }
+
+    .oddstable {
+      background-color: #C6C6C6;
+    }
+
+    .oddstable td {
+      line-height: 17px;
+      text-align: center;
+    }
+    /*------------------------------------------------team vs team--------------------*/
+
+    #teammain {
+      float: left;
+      width: 810px
+    }
+
+    #teammain td {
+      text-align: center;
+      line-height: 18px;
+    }
+
+    .team_info {
+      display: block;
+      line-height: 24px;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: #E6E6E6;
+      border-top-width: 1px;
+      border-top-style: solid;
+      border-top-color: #E6E6E6;
+    }
+
+    #teammain h2 {
+      font-size: 23px;
+      line-height: 23px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    #teammain h3 {
+      font-size: 16px;
+      line-height: 23px;
+      font-weight: bold;
+      color: #FFF;
+    }
+
+    #team_info2 {
+      border-top-width: 0px;
+      border-bottom-width: 0px;
+    }
+
+    .title_h3 {
+      background-color: #009D02;
+    }
+
+    .teamname_td {
+      background-color: #FFC;
+      line-height: 18px;
+      font-weight: bold;
+      font-size: 14px;
+      color: #060;
+    }
+
+    .teaminfo2 {
+      background-color: #E6F0FB;
+      color: #33638A;
+    }
+
+    .teaminfo_td {
+      background-color: #E3E3E3;
+      font-weight: bold;
+    }
+
+    .te1 {
+      background-color: #FFF;
+    }
+
+    .te2 {
+      background-color: #F5F5F5;
+    }
+
+    .greens {
+      color: #360;
+      background-color: #D3F88F;
+      font-weight: bold;
+    }
+
+    .BgYellow {
+      background-color: #fcebda;
+      color: #73250f
+    }
+
+    .BgSky {
+      background-color: #D5F1C7
+    }
+
+    #teamid .sl {
+      text-align: left
+    }
+
+    #teamid .sr {
+      text-align: right
+    }
+
+    .leftnav_2 li {
+      border-bottom: 1px solid #D7D7D7;
+    }
+
+    .leftnav_2 li a {
+      line-height: 20px;
+      display: block;
+      height: 20px;
+      width: 137px;
+      font-weight: bold;
+      color: #360;
+      padding-left: 6px;
+      text-align: left;
+    }
+
+    .leftnav_2 li a:hover {
+      color: #060;
+      text-decoration: none;
+      background-color: #FF3;
+    }
+
+    .hp {
+      FONT-SIZE: 8pt;
+      COLOR: #ffffff;
+      FONT-FAMILY: Verdana;
+      BACKGROUND-COLOR: #ff0000;
+    }
+    /*------------------------------------------------i vs i--------------------*/
+
+    .ivsi_top {
+      text-align: center;
+      padding-bottom: 16px;
+      padding-top: 16px;
+    }
+
+    .ivsi_top h2 {
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: bold;
+      display: inline;
+    }
+
+    .ivsi_top span a {
+      background-image: url(/images/Excel_icon.gif);
+      background-repeat: no-repeat;
+      background-position: left;
+      text-decoration: underline;
+      padding-left: 16px;
+      color: #5F9349;
+    }
+
+    .ivsi_top span a:hover {
+      color: #F60;
+      text-decoration: none;
+    }
+
+    #ivsi h3 {
+      font-size: 16px;
+      line-height: 23px;
+      font-weight: bold;
+      color: #FFF;
+    }
+
+    #ivsi td {
+      text-align: center;
+      line-height: 18px;
+    }
+
+    .ivsiinfo_td {
+      background-color: #72B0E9;
+      color: #FFF;
+      font-weight: bold;
+    }
+
+    .ivsiinfo_td a,
+    .ivsiinfo_td a:visited {
+      color: #FFF;
+      display: block;
+      background-color: #1F76C5;
+    }
+
+    .ivsiinfo_td a:hover {
+      color: #C30;
+      background-color: #FF0;
+      text-decoration: none;
+    }
+
+    .hh4 {
+      font-size: 14px;
+      font-weight: bold;
+      color: #FFF;
+    }
+
+  </style>
+
+  <script language="javascript" type="text/javascript" src="http://www.addscore.com/data/index_ad.js"></script>
+  <style type="text/css">
+    #FloatingLayer507 {
+      position: absolute;
+      left: 800;
+      top: 10;
+      z-index: 1000;
+      font-size: 12px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    #FloatingLayer507 img {
+      display: block;
+      border: 0px;
+    }
+
+    #FloatingLayer507 a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    #FloatingLayer507 a:hover {
+      color: #FF0000;
+    }
+
+    #FloatingLayer508 {
+      position: absolute;
+      left: 200;
+      top: 10;
+      z-index: 1000;
+      font-size: 12px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    #FloatingLayer508 img {
+      display: block;
+      border: 0px;
+    }
+
+    #FloatingLayer508 a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    #FloatingLayer508 a:hover {
+      color: #FF0000;
+    }
+
+  </style>
+  <style type="text/css">
+    .element {
+      position: fixed;
+      bottom: 3%;
+      left: 2%;
+      padding: 1px;
+      font-family: Arial;
+      font-size: 18px;
+    }
+
+  </style>
+
+
+  <div style="margin:0 auto; width:970px; padding-bottom:3px">
+    <table width="100%" border="0" cellpadding="3">
+      <tbody>
+        <tr>
+          <td align="right" style="p">
+            <script language="javascript" type="text/javascript">
+              if (Accept_Language.indexOf("-cn") == -1) {
+                show_ad("middle_1");
+              }
+
+            </script>
+            <a href="#" target="_blank"><img src="/modules/core/client/img/banners/banner1.jpg" width="100%" height="100%" class="middle_ad1"></a>
+            <!--<a href="http://www.toppertv.com" target="_blank"><img src="/modules/core/client/img/banners/banner1.jpg" width="478" height="42" class="middle_ad1"></a>-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--<script language="Javascript" type="text/javascript" src="/data/public.js?3"></script>-->
+
+  <!--โค๊ด ป้ายที่ 1-->
+  <script type="text/javascript">
+    var FloatingAd_Timeout507 = 6000000;
+    var startX507 = 818;
+    var startY507 = 10;
+    var FloatingAd_Layer507 = "FloatingLayer507";
+
+  </script>
+
+  <div id="FloatingLayer507" style="left: 1760px; top: 50px;">
+    <div align="right"><a href="#" onclick="closebar_th507();closebar_th508(); return false">x [close]</a></div>
+    <a href="#" target="_blank"><img src="/modules/core/client/img/banners/S__21610521.gif" width="75" height="240" bordor="0" target="_blank"></a><br>
+    <a href="#" target="_blank"><img src="/modules/core/client/img/banners/S__21610521.gif" bordor="0" target="_blank"></a><br>
+  </div>
+
+  <script type="text/javascript">
+    var FloatingAd_close507 = 0;
+    var d = document;
+    var ns = (navigator.appName.indexOf("Netscape") != -1 && navigator.userAgent.indexOf("Gecko") == -1);
+    var iebody = (document.compatMode && document.compatMode != "BackCompat") ? document.documentElement : document.body
+
+    startX507 = MAX_getClientSize(160);
+
+    function MAX_getClientSize(w) {
+      if (window.innerHeight >= 0) {
+        return window.innerWidth - w;
+      } else if (document.documentElement && document.documentElement.clientWidth > 0) {
+        return document.documentElement.clientWidth - w;
+      } else if (document.body.clientHeight > 0) {
+        return document.body.clientWidth - w;
+      } else {
+        return 900;
+      }
+    }
+
+    function FloatingAd_ModiObj507(id) {
+      // find obj
+      var obj = d.getElementById ? d.getElementById(id) : (d.all ? d.all[id] : d.layers[id]);
+      //NS	
+      if (d.layers) {
+        obj.style = obj;
+      }
+      //Define
+      obj.float_to = function (x, y) {
+        if (document.all || document.getElementById) {
+          this.style.left = x + "px";
+          this.style.top = y + "px";
+        }
+      };
+
+      obj.x = startX507;
+      obj.y = startY507;
+      return obj;
+    }
+
+    function closebar_th507() {
+      document.getElementById(FloatingAd_Layer507).style.visibility = "hidden"
+    }
+
+    function floatingAdClose507() {
+      clearTimeout(FloatingAd_Timer507);
+      if (d.getElementById) {
+        d.getElementById(FloatingAd_Layer507).style.display = "none";
+        d.getElementById(FloatingAd_Layer507).innerHTML = "";
+      } else if (d.all) {
+        d.all[FloatingAd_Layer507].style.display = "none";
+        d.all[FloatingAd_Layer507].innerHTML = "";
+      } else {
+        d.layers[FloatingAd_Layer507].visibility = "hide";
+      }
+      FloatingAd_close507 = 1;
+    }
+
+    function FloatingAd_Stay507() {
+      if (!FloatingAd_close507) {
+        var pageY507 = document.all ? iebody.scrollTop : pageYOffset
+        FloatingObj507.y += (pageY507 + startY507 - FloatingObj507.y) / 8;
+        FloatingObj507.float_to(FloatingObj507.x, FloatingObj507.y);
+        setTimeout("FloatingAd_Stay507()", 10);
+      }
+    }
+
+    function FloatingAd_Start507() {
+      FloatingObj507 = FloatingAd_ModiObj507(FloatingAd_Layer507);
+      if (FloatingAd_Timeout507 != 0) FloatingAd_Timer507 = setTimeout("floatingAdClose507()", FloatingAd_Timeout507);
+      FloatingAd_Stay507();
+    }
+    FloatingAd_Start507();
+
+  </script>
+  <!--จบโค๊ด ป้ายที่ 1-->
+  <!--โค๊ด ป้ายที่ 1-->
+  <script type="text/javascript">
+    var FloatingAd_Timeout508 = 6000000;
+    var startX508 = 818;
+    var startY508 = 10;
+    var FloatingAd_Layer508 = "FloatingLayer508";
+
+  </script>
+
+  <div id="FloatingLayer508" style="left: 0px; top: 50px;">
+    <div align="right"><a href="#" onclick="closebar_th508();closebar_th507(); return false">x [close]</a></div>
+    <a href="#" target="_blank"><img src="/modules/core/client/img/banners/S__21610521.gif" width="75" height="240" bordor="0" target="_blank"></a><br>
+    <a href="#" target="_blank"><img src="/modules/core/client/img/banners/S__21610521.gif" bordor="0" target="_blank"></a><br>
+  </div>
+
+  <script type="text/javascript">
+    var FloatingAd_close508 = 0
+    var d = document
+    var ns = (navigator.appName.indexOf('Netscape') != -1 && navigator.userAgent.indexOf('Gecko') == -1)
+    var iebody = (document.compatMode && document.compatMode != 'BackCompat') ? document.documentElement : document.body
+
+    startX508 = 0
+
+    function MAX_getClientSize(w) {
+      if (window.innerHeight >= 0) {
+        return window.innerWidth - w
+      } else if (document.documentElement && document.documentElement.clientWidth > 0) {
+        return document.documentElement.clientWidth - w
+      } else if (document.body.clientHeight > 0) {
+        return document.body.clientWidth - w
+      } else {
+        return 900
+      }
+    }
+
+    function FloatingAd_ModiObj508(id) {
+      // find obj
+      var obj = d.getElementById ? d.getElementById(id) : (d.all ? d.all[id] : d.layers[id])
+      // NS
+      if (d.layers) {
+        obj.style = obj
+      }
+      // Define
+      obj.float_to = function (x, y) {
+        if (document.all || document.getElementById) {
+          this.style.left = x + 'px'
+          this.style.top = y + 'px'
+        }
+      }
+
+      obj.x = startX508
+      obj.y = startY508
+      return obj
+    }
+
+    function closebar_th508() {
+      document.getElementById(FloatingAd_Layer508).style.visibility = 'hidden'
+    }
+
+    function floatingAdClose508() {
+      clearTimeout(FloatingAd_Timer508)
+      if (d.getElementById) {
+        d.getElementById(FloatingAd_Layer508).style.display = 'none'
+        d.getElementById(FloatingAd_Layer508).innerHTML = ''
+      } else if (d.all) {
+        d.all[FloatingAd_Layer508].style.display = 'none'
+        d.all[FloatingAd_Layer508].innerHTML = ''
+      } else {
+        d.layers[FloatingAd_Layer508].visibility = 'hide'
+      }
+      FloatingAd_close508 = 1
+    }
+
+    function FloatingAd_Stay508() {
+      if (!FloatingAd_close508) {
+        var pageY508 = document.all ? iebody.scrollTop : pageYOffset
+        FloatingObj508.y += (pageY508 + startY508 - FloatingObj508.y) / 8
+        FloatingObj508.float_to(FloatingObj508.x, FloatingObj508.y)
+        setTimeout('FloatingAd_Stay508()', 10)
+      }
+    }
+
+    function FloatingAd_Start508() {
+      FloatingObj508 = FloatingAd_ModiObj508(FloatingAd_Layer508)
+      if (FloatingAd_Timeout508 != 0) FloatingAd_Timer508 = setTimeout('floatingAdClose508()', FloatingAd_Timeout508)
+      FloatingAd_Stay508()
+    }
+    FloatingAd_Start508()
+
+  </script>
+  <!--จบโค๊ด ป้ายที่ 1-->
+
+  <div id="main">
+    <!--left start -->
+    <div id="t_left">
+      <p class="ui1"></p>
+
+      <p class="ui2"></p>
+      <p style="margin:5px 0">
+        <script language="javascript" type="text/javascript">
+          show_ad("left_1");
+
+        </script>
+      </p>
+      <p>
+        <a href="#" target="_blank"><img src="/modules/core/client/img/banners/scrking_banner7.jpg" width="145" height="261" style="margin-bottom:5px;"></a>
+      </p>
+      <p>
+        <a href="#" target="_blank"><img src="/modules/core/client/img/banners/scrking_banner7.jpg" width="145" height="261" style="margin-bottom:5px;"></a>
+      </p>
+      <p>
+        <a href="#" target="_blank"><img src="/modules/core/client/img/banners/scrking_banner7.jpg" width="145" height="261" style="margin-bottom:5px;"></a>
+      </p>
+      <p>
+        <!--<a href="#/" target="_blank"><img src="/modules/core/client/img/banners/scrking_banner7.jpg" style="margin-bottom:5px;"></a>-->
+      </p>
+      <p><img src="/modules/core/client/img/banners/scrking_banner7.jpg" width="143" height="75" style="mmargin-bottom:5px; margin-top:5px;"></p>
+
+
+
+    </div>
+    <!--left end -->
+    <!--right start -->
+    <div id="t_right">
+      <div style="clear:both; height:31px">
+
+
+
+      </div>
+      <div class="live">
+        <div style="float:left">
+          <div id="min">
+            <div id="Layer1" style="position:absolute; width:100px; height:1px; z-index:5">
+              <div id="showoptional2">
+
+                <div id="myleague2">
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div id="mintable">
+
+            </div>
+          </div>
+        </div>
+        <div style="float:right; width:145px">
+
+
+
+
+          <p style="padding-top:5px;"></p>
+          <p class="ad_d">
+            <script language="javascript" type="text/javascript">
+              show_ad("right_1");
+
+            </script>
+          </p>
+          <p>
+            <a href="#" target="_blank"><img src="/modules/core/client/img/banners/scrking_banner7.jpg" width="145" height="261" style="margin-bottom:5px;"></a>
+          </p>
+          <p>
+            <a href="#" target="_blank"><img src="/modules/core/client/img/banners/scrking_banner7.jpg" width="145" height="261" style="margin-bottom:5px;"></a>
+          </p>
+          <p>
+            <a href="#" target="_blank"><img src="/modules/core/client/img/banners/scrking_banner7.jpg" width="145" height="261" style="margin-bottom:5px;"></a>
+          </p>
+
+          <p>
+            <!--<a href="http://www.thbet88.com" target="_blank"><img src="/modules/core/client/img/banners/scrking_banner7.jpg" style="margin-bottom:5px;"></a>-->
+          </p>
+          <p><img src="/modules/core/client/img/banners/scrking_banner7.jpg" width="143" height="75" style="mmargin-bottom:5px; margin-top:5px;"></p>
+        </div>
+        <br style="clear:both">
+      </div>
+    </div>
+    <!--right end -->
+    <span class="clear"></span>
+  </div>
+
+  <div id="bottom" align="center">
+        
+        
+  </div>
+
+
+
+
+</section>
